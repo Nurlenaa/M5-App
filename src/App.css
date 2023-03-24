@@ -1,0 +1,167 @@
+/* ##### * ##### */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* overflow: hidden; */
+  /* background-color: var(--mainColorLight); */
+}
+
+:root {
+  --mainColor: #3772fe;
+  --mainColorLight: #e1f1f8;
+  --secondaryColor: #5ebb49;
+  --tertiaryColor: #08f3fb94;
+  background-color: #090909;
+  color: white;
+  /* overflow: hidden; */
+}
+:root::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+
+.Pages{
+  height: 100vh;
+}
+
+/* ##### Navigation ##### */
+.M5T-logo {
+  padding-top: 25px;
+  padding-left: 3vw;
+  max-width: 100px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.fixed-navigation{
+  position: fixed; top: 0; left: 0; z-index: 99; width: 100%;
+  padding: 0px 0px;
+  justify-content: flex-end;
+}
+
+#navbar{
+  padding: 25px 20px;
+  display: flex;
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 5px;
+  position: relative;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  color: var(--tertiaryColor);
+}
+
+#navbar li a:hover{
+  margin: 0px;
+  background-color:var(--mainColor);
+  padding: 20px 20px;
+  color: var(--mainColorLight);
+}
+
+#mobile{
+  display: none;
+}
+
+/* ##### App ##### */
+.App{
+  /* padding-top: 8vh; */
+  height: 200vh;
+  font-size: 15vw;
+  font-weight: 700;
+  zoom: 100%;
+  /* opacity: 0.8; */
+  /* margin-top: 7vh; */
+  background-position: right top;
+  background-size: cover;
+}
+
+.HomeLogo {
+  position:fixed;
+  height: 90%; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app_title { 
+  text-align: center;
+}
+#app_left {
+  /* padding-top: 5vh; */
+  position: sticky;
+  top: 10vh;
+  margin-right: 35%;
+  padding-bottom: 3vh;
+}
+#app_right {
+  position: sticky;
+  top: 55vh;
+  padding-left: 35%;
+}
+
+
+/* ##### Mobile Resolution ##### */
+@media only screen and (max-width:770px){
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 70px;
+    right: -300px;
+    padding: 40px 0px 0 40px;
+    width: 150px;
+    height: 42vh;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+  }
+
+  #navbar.active{
+    right: 0px;
+  }
+
+  #navbar li{
+    margin-bottom: 20px;
+  }
+
+  #mobile{
+    margin-right: 20px;
+    display:block;
+  }
+}
+
+/* ##### Footer ##### */
+.Footer {
+  background-color: black;
+  padding: 20px;
+}
+.Rights{
+  text-align: center;
+  justify-items: center;
+  color: var(--tertiaryColor) ;
+  font-size: small;
+}
